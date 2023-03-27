@@ -7,7 +7,7 @@ router.get("/:urlId",async(req,res)=>{
     try {
         const id=req.params.urlId;
         console.log(id)
-        const data=await UrlData.findOne({shortUrl:`http://localhost:2005/urlpage/${id}`}) 
+        const data=await UrlData.findOne({shortUrl:`https://url-shortener-back-end-gamma.vercel.app/urlpage/${id}`}) 
       
         if(data){
                 res.redirect(data.longUrl)  
